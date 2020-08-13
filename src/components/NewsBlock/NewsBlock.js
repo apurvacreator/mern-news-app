@@ -23,7 +23,7 @@ const NewsBlock = ({ newsArticles, isHeadlines }) => (
         </Row>
         <Row>
             {newsArticles.map(({ title, url, urlToImage, publishedAt }) =>
-                <Col key={title} style={{ margin: 10 }}>
+                <Col key={title} style={{ margin: '10px auto' }}>
                     <NewsItem
                         title={title}
                         url={url}
