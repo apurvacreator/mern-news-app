@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Card, SafeAnchor } from 'react-bootstrap';
 import NoImage from '../../no-camera.svg';
 
@@ -12,5 +13,12 @@ const NewsItem = ({ urlToImage, title, url, date }) => (
         </Card.Body>
     </Card>
 )
+
+NewsItem.propTypes = {
+    urlToImage: PropTypes.string,
+    title: PropTypes.string,
+    url: PropTypes.string,
+    date: PropTypes.string,
+}
 
 export default NewsItem;

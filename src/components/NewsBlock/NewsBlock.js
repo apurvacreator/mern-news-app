@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NewsItem from './NewsItem';
 import { Row, Col } from 'react-bootstrap';
 import Info from '../Info/Info';
@@ -34,5 +35,22 @@ const NewsBlock = ({ newsArticles, isHeadlines }) => (
         </Row>
     </>
 )
+
+NewsBlock.propTypes = {
+    newsArticles: PropTypes.arrayOf(PropTypes.shape({
+        author: PropTypes.string,
+        content: PropTypes.string,
+        description: PropTypes.string,
+        publishedAt: PropTypes.string,
+        source: PropTypes.shape({
+            id: PropTypes.string,
+            name: PropTypes.string
+        }),
+        title: PropTypes.string,
+        url: PropTypes.string,
+        urlToImage: PropTypes.string
+    })),
+    isHeadlines: PropTypes.bool.isRequired
+}
 
 export default NewsBlock;

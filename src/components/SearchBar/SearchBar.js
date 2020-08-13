@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormControl, Col, Row } from 'react-bootstrap';
 
 const SearchBar = ({ handleChange }) => (
@@ -11,5 +12,9 @@ const SearchBar = ({ handleChange }) => (
         </Col>
     </Row>
 )
+
+SearchBar.propTypes = {
+    handleChange: PropTypes.func.isRequired
+}
 
 export default SearchBar;
