@@ -1,6 +1,6 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import NewsItem from '../NewsItem';
+import React from 'react'
+import { mount } from 'enzyme'
+import NewsItem from '../NewsItem'
 
 const news = {
     urlToImage: "https://cbsnews3.cbsistatic.com/hub/i/r/2020/08/12/620d4e6e-bcfa-45af-8599-ba9972b6f17d/thumbnail/1200x630/7c2070a64901e2f363b1d75058f86ce8/gettyimages-1180699958.jpg",
@@ -9,7 +9,15 @@ const news = {
     date: '2020-08-13T11:46:00Z'
 }
 
-test('NewsItem renders correctly', () => {
-    const component = render(<NewsItem {...news} />);
-    expect(component).toMatchSnapshot();
+describe('NewsItem', () => {
+    let wrapper
+    beforeEach(() => {
+        wrapper = mount(<NewsItem {...news} />)
+    })
+    it('should render', () => {
+        expect(wrapper).toBeTruthy()
+    })
+    it('should match snapshot', () => {
+        expect(wrapper).toMatchSnapshot()
+    })
 })

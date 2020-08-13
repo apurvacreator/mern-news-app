@@ -1,6 +1,7 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import NewsBlock from '../NewsBlock';
+import React from 'react'
+import { mount } from 'enzyme'
+import NewsBlock from '../NewsBlock'
+import NewsItem from '../NewsItem';
 
 const props = {
     newsArticles: [{
@@ -12,14 +13,19 @@ const props = {
     isHeadlines: false
 }
 
-test('NewsBlock renders correctly', () => {
-    const component = render(<NewsBlock {...props} />);
-    expect(component).toMatchSnapshot();
+describe('NewsBlock', () => {
+    let wrapper
+    beforeEach(() => {
+        wrapper = mount(<NewsBlock {...props} />)
+    })
+    it('should render', () => {
+        expect(wrapper).toBeTruthy()
+    })
+    it('should match snapshot', () => {
+        expect(wrapper).toMatchSnapshot()
+    })
+    it('should render NewsItem component', () => {
+        expect(wrapper.prop('newsArticles')).toEqual(props.newsArticles)
+        expect(wrapper.find(NewsItem)).toHaveLength(1)
+    })
 })
-
-test('NewsBlock renders title as Your search results', () => {
-    const { getByText } = render(<NewsBlock {...props} />);
-    const titleElement = getByText(/Your search results/i);
-    expect(titleElement).toBeInTheDocument();
-})
-
