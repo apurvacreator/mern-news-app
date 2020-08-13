@@ -18,6 +18,6 @@ describe('NewsItem', () => {
         expect(wrapper).toBeTruthy()
     })
     it('should match snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
+        expect(wrapper.html()).toMatchSnapshot()
     })
 })

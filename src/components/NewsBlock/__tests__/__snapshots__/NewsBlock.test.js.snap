@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsBlock should match snapshot 1`] = `ReactWrapper {}`;
+exports[`NewsBlock should match snapshot 1`] = `"<div class=\\"row\\"><div class=\\"col\\"><h2>Your search results</h2><hr></div></div><div class=\\"row\\"><div style=\\"margin: 10px auto;\\" class=\\"col\\"><div style=\\"width: 18rem;\\" class=\\"card\\"><img class=\\"card-img-top\\" src=\\"https://cbsnews3.cbsistatic.com/hub/i/r/2020/08/12/620d4e6e-bcfa-45af-8599-ba9972b6f17d/thumbnail/1200x630/7c2070a64901e2f363b1d75058f86ce8/gettyimages-1180699958.jpg\\" alt=\\"This is a test news\\"><div class=\\"card-body\\"><div class=\\"card-title h5\\">This is a test news</div><p class=\\"card-text\\">Invalid Date</p><a variant=\\"primary\\" href=\\"https://www.cbsnews.com/news/big-12-college-football-2020-season-big-ten-pac-12-postponements/\\" target=\\"_blank\\">Read the article</a></div></div></div></div>"`;

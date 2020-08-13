@@ -22,7 +22,7 @@ describe('NewsBlock', () => {
         expect(wrapper).toBeTruthy()
     })
     it('should match snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
+        expect(wrapper.html()).toMatchSnapshot()
     })
     it('should render NewsItem component', () => {
         expect(wrapper.prop('newsArticles')).toEqual(props.newsArticles)
