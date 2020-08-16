@@ -7,7 +7,7 @@ Datasource - [News API](https://newsapi.org/).
 ## Libraries Used
 
 Backend - Express, Node fetch<br>
-Frontend - React, React Bootstrap, Lodash
+Frontend - React, React Bootstrap, Lodash<br>
 Component Library - Storybook
 
 The frontend is bootstraped using create-react-app
