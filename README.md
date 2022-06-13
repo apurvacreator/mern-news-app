@@ -1,5 +1,3 @@
-# CONDE NAST - NEWS APP 
-
 A full stack app for the latest news updates from UK and other news from around the globe.<br> 
 Datasource - [News API](https://newsapi.org/).
 
